@@ -1,90 +1,99 @@
 import React, { Component } from "react";
 import Listcountry from "./components/ListCountry";
+import Fav from './components/fav';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
- import axios from "axios";
+import axios from "axios";
 import "./App.css";
-
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       Cname: "",
-       Countries:[],
-MyList:[],
-    }
+      Countries: [],
+      MyList: [],
+      hideToolTips:'display'
+      // HideInput:false,
+      // HideButton:false
+    };
+
   }
+
+handleHide = (e) =>{
+  console.log("hi");
+if(this.state.hideToolTips === 'none'){
+  this.setState({ hideToolTips: "display" })
+}else{
+    this.setState({ hideToolTips: "none" })
+  }
+  }
+  add = country => {
+          console.log("wpppp");
+          console.log(country.name);
+          this.setState({
+            MyList: [...this.state.MyList, country]
+          });
+  };
   handleChange = e => {
     e.preventDefault();
-    // console.log("country name");
-    // console.log(e.target.value);
-    // console.log(e.target);
     this.setState({
       Cname: e.target.value
     });
   };
   SearchCountry = () => {
-    //const countrySearch =  [];
     console.log("Searching ....");
-        // this.setState({
-        //   Cname: e.target.value
-        // });
+
     axios({
       method: "Get",
-        // url: `https://restcountries.eu/rest/v2/name/saudi`
-url: (`https://restcountries.eu/rest/v2/name/${this.state.Cname}`)
+      // url: `https://restcountries.eu/rest/v2/name/saudi`
+      url: `https://restcountries.eu/rest/v2/name/${this.state.Cname}`
     })
       .then(res => {
-        // for(let i=0;i<=res.data.length;i++){
-        // console.log("RESPONSE: ", res);
-        // console.log("DATA: ", res.data[0].name);
-        // let countrySearch = res.data[i];
-          this.setState({
-            // name:res.data.name,
-            // region:res.data.region,
-            // capital:res.data.capital,
-            // nativeName:res.data.nativeName,
-            // currencies:res.data.currencies,
-            // languages:res.data.languages,
-            //  Countries: [...countrySearch]
-            Countries: [...this.state.Countries, res.data[0]]
-          });
-        //  console.log("what " + countrySearch);
-        // }
+        this.setState({
+          Countries: [ res.data[0]],
+          // Countries: [...this.state.Countries, res.data[0]],
+          Cname: " "
+        });
       })
       .catch(err => {
         console.log("ERROR: ", err);
       });
+      // this.handleHide();
   };
   render() {
+
+      let style = this.state.hideToolTips ? {disply:'none' } : {};
     return (
       <div>
         <Router>
-          <div>
-            {/* <List todos={this.state.todos}/> */}
-            <Link to="/ListCountry">Country</Link> {"||  "}
-            {/* <Link to="/List">Task</Link> {'||  '}
-            <Link to="/About">About</Link>{'||  '} */}
+          <div >
+            <Link to="/List">Country</Link> {"||  "}
+            <Link to="/Fav">Saved Country</Link> {"||  "}
+            <br/><br/>
+            <div className={`Toggle-filter-${this.state.hideToolTips}`}>
+              <input
+                type="name"
+                placeholder="Enter country Name"
+                value={this.state.Cname}
+                onChange={e => this.handleChange(e)}
+              />
+              <button
+                onClick={() => this.SearchCountry()}
+              >
+                Searching ..
+              </button>
+            </div>
             <Route
-              path="/ListCountry"
+              path="/List"
               component={() => (
-                <Listcountry country={this.state.Countries} />
+                <Listcountry country={this.state.Countries} add={this.add} />
               )}
             />
-            {/* <Route path="/List" component={() => <List tasks={this.state.todos} />} />
-          <Route path="/About" component={About} /> */}
+            <Route
+              path="/Fav"
+              component={() => <Fav SavedCountry={this.state.MyList} />}
+            />
           </div>
         </Router>
-
-        <input
-          type="name"
-          placeholder="Enter country Name"
-          value={this.state.Cname}
-          onChange={e => this.handleChange(e)}
-        />
-        <button id="country" onClick={() => this.SearchCountry()}>
-          Searching ..
-        </button>
-        {/* <Listcountry country={this.state.Countries} /> */}
       </div>
     );
   }

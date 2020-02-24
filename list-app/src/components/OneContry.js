@@ -3,8 +3,9 @@ import "./../App.css";
 export default class OneContry extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    };
+    // this.state = {
+    
+    // };
   }
    render() {
        return (
@@ -13,9 +14,15 @@ export default class OneContry extends Component {
              <tr>
                <th scope="col">{this.props.country.name}</th>
                <th scope="col">
-                 Information{" "}
-                 <button type="button" class="btn btn-secondary btn-lg" >
-                   Add To List</button></th>
+                 Information
+                 <button
+                   type="button"
+                   className="btn btn-outline-secondary"
+                   onClick={() => this.props.add(this.props.country)}
+                 >
+                   Add To List
+                 </button>
+               </th>
              </tr>
            </thead>
            <tbody>
