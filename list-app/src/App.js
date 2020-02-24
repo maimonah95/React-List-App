@@ -61,7 +61,6 @@ if(this.state.hideToolTips === 'none'){
   };
   render() {
 
-      let style = this.state.hideToolTips ? {disply:'none' } : {};
     return (
       <div>
         <Router>
@@ -69,7 +68,7 @@ if(this.state.hideToolTips === 'none'){
             <Link to="/List">Country</Link> {"||  "}
             <Link to="/Fav">Saved Country</Link> {"||  "}
             <br/><br/>
-            <div className={`Toggle-filter-${this.state.hideToolTips}`}>
+            <div >
               <input
                 type="name"
                 placeholder="Enter country Name"

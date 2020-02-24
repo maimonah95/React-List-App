@@ -18,8 +18,7 @@ export default class OneContry extends Component {
                  <button
                    type="button"
                    className="btn btn-outline-secondary"
-                   onClick={() => this.props.add(this.props.country)}
-                 >
+                   onClick={() => this.props.add(this.props.country)}>
                    Add To List
                  </button>
                </th>

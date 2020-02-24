@@ -40,3 +40,10 @@ img {
 .Toggle-filter-display{
   display: inline-block;
 }
+.Toggle2-filter-none{
+  display: none;
+}
+
+.Toggle2-filter-display{
+  display: inline-block;
+}
