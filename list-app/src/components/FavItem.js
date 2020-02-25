@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 export default class Fav extends Component {
   constructor(props) {
     super(props);
@@ -20,20 +19,37 @@ export default class Fav extends Component {
       <div
         type="button"
         className="btn btn-secondary btn-lg btn-block"
-        onClick={this.handleHide} >
-          <br/>
+        onClick={this.handleHide}
+      >
+        <button
+          type="button"
+          className="btn btn-outline-secondary"
+          onClick={() => this.props.delete(this.props.country)}
+        >
+          Delete
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-secondary"
+          onClick={() => this.props.deleteAll()}
+        >
+          Delete all
+        </button>
+        <br />
         {this.props.country.name}
         <div className={`Toggle-filter-${this.state.hideToolTips}`}>
-            <br/>
-         Capital : {this.props.country.capital}
+          <br />
+          Capital : {this.props.country.capital}
           <br />
           Region :{this.props.country.region}
           <br />
-          Languages :{this.props.country.languages[0].name}
+          Languages :{this.props.country.languages}
           <br />
-           currencies :{this.props.country.currencies[0].code}
+          currencies :{this.props.country.currencies}
           <br />
           Flag :<img src={`${this.props.country.flag}`} />
+          <br />
+          Time: {this.props.country.timezones}
         </div>
       </div>
     );
