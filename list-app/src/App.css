@@ -1,38 +1,190 @@
-.App {
+body {
+
+  background-color: rgba(118, 99, 141, 0.644);
+}
+html{
+    background-color: rgba(199, 178, 170, 0.377);
+}
+
+#root{
+  margin: 30px auto;
+  /* background: rgba(67, 163, 80, 0.363); */
+  padding: 30px;
+  border-radius: 8px;
+  padding: 18px;
+  width: 1120px;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
+  border-radius: 10px;
+}
+
+.DeletNum{
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  top: 20px;
+  left: 35%;
+}
+.delAll{
+  border-radius: 10px;
+    text-align: center;
+    position: relative;
+  top: 0px;
+  left: 95%;  
+}
+.Links{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a.Links {
+  color: #fff;
+  text-align: center;
+  background-color:#fff;
+}
+.link{
+    text-align: center;
+    background-color: #cf9e6577 ;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    top: 50px;
+}
+.Links :hover{
+  background-color: rgba(138, 141, 180, 0.473);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.favItem{
+        height: 100px;
+    padding: 15px;
+    background-color: #cf9e6554;
+    border-radius: 10px;
+    text-align: center;
+  color: #cf9e65;
+      margin: 15px;
+  text-justify: auto;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
-.App-link {
-  color: #61dafb;
+.InputCountry{
+border: 0;
+width: 400px;
+height: 50px;
+padding: 0 20px;
+margin: 20px;
+border-radius: 10px;
+box-shadow: rgba(123, 158, 33, 0.692);
+
+/* color:;
+background-color: ; */
+   }
+.ButtonCountry{
+width: 100px;
+height: 50px;
+border: 0;
+border-radius: 10px;
+
+   }
+.ButtonCountry:hover{
+color: #fff;
+background-color: #cf9e65ad;
+border-color: #cf9e65;
+transform: rotate(-2deg);
+
+   }
+.listCountry{
+    text-align: center;
+}
+   
+.delet{
+    text-align: center;
+     margin-right: 20px;
+}
+   
+img {
+    border: 2px solid rgb(138, 28, 28);
+    width: 214px;
+    height: 150px;
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.Add-to-list{
+   border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: 0px;
+    left: 40%;
 }
+.Watch{
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: -34px;
+  left: 41%;
+}
+.modify{
+       border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: -40px;
+    left: 42%;
+}
+.Toggle-filter-none{
+  display: none;
+    display: none;
+    text-align: center;
+  color: #cf9e65;
+  text-justify: auto;
+}
+.Toggle-filter-display{
+  display: inline-block;
+    text-align: center;
+  color: black;
+  background-color: #7c65cf;
+      height: 400px;
+    width: 1050px;
+}
+.Toggle2-filter-none{
+  display: none;
+    display: none;
+    text-align: center;
+  color: #cf9e65;
+  text-justify: auto;
+}
+.Toggle2-filter-display{
+  display: inline-block;
+    text-align: center;
+  color: black;
+  background-color: #cf9e6554;
+      height: 400px;
+    width: 1050px;
+}
+.favItemRed{
+  /*  */
+            height: 100px;
+    padding: 15px;
+    background-color: #7c65cf;
+    border-radius: 10px;
+    text-align: center;
+  color: black;
+      margin: 15px;
+  text-justify: auto;
+}
+.favItemBlue{
+          height: 100px;
+    padding: 15px;
+    background-color: #cf9e6554;
+    border-radius: 10px;
+    text-align: center;
+  color: black;
+      margin: 15px;
+  text-justify: auto;
+}
+

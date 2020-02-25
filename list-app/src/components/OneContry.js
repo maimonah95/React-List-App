@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./../App.css";
+import { IoMdAdd } from "react-icons/io";
 export default class OneContry extends Component {
   // constructor(props) {
   //   super(props);
@@ -17,10 +18,10 @@ export default class OneContry extends Component {
               Information
               <button
                 type="button"
-                className="btn btn-outline-secondary"
+                className="Add-to-list"
                 onClick={() => this.props.add(this.props.country)}
               >
-                Add To List
+                <IoMdAdd />
               </button>
             </th>
           </tr>
