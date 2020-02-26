@@ -21,19 +21,20 @@ html{
   border-radius: 10px;
 }
 
-.DeletNum{
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-  top: 20px;
-  left: 35%;
-}
+
 .delAll{
   border-radius: 10px;
     text-align: center;
     position: relative;
   top: 0px;
   left: 95%;  
+}
+.delSelectedItem{
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  top: 0px;
+  left: 95%;   
 }
 .Links{
   text-align: center;
@@ -122,6 +123,13 @@ img {
     top: 0px;
     left: 40%;
 }
+/* .DeletNum{
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  top: 20px;
+  left: 35%;
+}
 .Watch{
     border-radius: 10px;
     text-align: center;
@@ -135,7 +143,14 @@ img {
     position: relative;
     top: -40px;
     left: 42%;
-}
+}*/
+/* .selectedItem{
+           border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: -40px;
+    left: 43%; 
+} */
 .Toggle-filter-none{
   display: none;
     display: none;
@@ -177,6 +192,43 @@ img {
       margin: 15px;
   text-justify: auto;
 }
+.favItemRed input{
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+}
+.favItemRed input :focus{
+outline: none;
+} 
+.favItemRed .DeletNum{
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  top: 20px;
+  left: 35%;
+}
+.favItemRed .Watch{
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: -34px;
+  left: 41%;
+}
+.favItemRed .modify{
+       border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: -40px;
+    left: 42%;
+}
+.favItemRed .selectedItem{
+           border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: -40px;
+    left: 43%;
+}
 .favItemBlue{
           height: 100px;
     padding: 15px;
@@ -187,4 +239,40 @@ img {
       margin: 15px;
   text-justify: auto;
 }
-
+.favItemBlue input{
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+}
+.favItemBlue input :focus{
+outline: none;
+} 
+.favItemBlue .DeletNum{
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  top: 20px;
+  left: 35%;
+}
+.favItemBlue .Watch{
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: -34px;
+  left: 41%;
+}
+.favItemBlue .modify{
+       border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: -40px;
+    left: 42%;
+}
+.favItemBlue .selectedItem{
+           border-radius: 10px;
+    text-align: center;
+    position: relative;
+    top: -40px;
+    left: 43%;
+}

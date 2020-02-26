@@ -7,11 +7,12 @@ export default class ListCountry extends Component {
     this.state = {
     };
   }
+  // Map country that user search on 
   render() {
     let newTasks = this.props.country.map((data, index) => {
       return (
         <div>
-          <OneCountry country={data} key={index} add={this.props.add} />
+          <OneCountry country={data} key={data.name} add={this.props.add} />
         </div>
       );
     });
