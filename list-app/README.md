@@ -1,7 +1,7 @@
 
 
 # Project #2: Simple React App
-![App Logo](https://image.flaticon.com/icons/svg/744/744502.svg)
+
 ## Overview:
 Country Informations React App.
 The User Can Serach about Countries By Writing Country name.

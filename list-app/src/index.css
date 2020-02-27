@@ -20,7 +20,7 @@
   position: absolute;
   top: 3%;
   left: 10%;
-  background: #bbaf7b;
+  background: #dac878;
   width: 1500px;
   height: 1300px;
   margin-left: -150px;
@@ -32,12 +32,12 @@
 .wave.-three {
   animation: drift 7500ms infinite linear;
 	position: fixed;
-	background-color: rgba(39, 179, 92, 0.733);
+	background-color: rgba(36, 76, 207, 0.842);
 }
 .wave.-two {
   animation: drift 3000ms infinite linear;
   opacity: .1;
-  background: #9b6e1ba4;
+  background: #b3d635a4;
 	position: fixed;
 }
 .box:after {
