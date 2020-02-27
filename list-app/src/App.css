@@ -1,9 +1,15 @@
 body {
-
-  background-color: rgba(118, 99, 141, 0.644);
+  
+  background-color: rgba(118, 99, 141, 0.644);  
+}
+.big{
+  background-image: url('https://image.flaticon.com/icons/svg/744/744502.svg');
+  background-repeat: no-repeat;
+  background-position: right;
 }
 html{
     background-color: rgba(199, 178, 170, 0.377);
+    
 }
 
 #root{
@@ -52,6 +58,7 @@ html{
     border-radius: 10px;
     padding: 10px;
     top: 50px;
+
 }
 
 .favItem{

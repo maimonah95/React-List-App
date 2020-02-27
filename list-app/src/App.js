@@ -111,46 +111,42 @@ export default class App extends Component {
   };
   render() {
     return (
-      <div >
+      <div>
         <Router>
-          <div>
-            <div className="link">
-              <Link  to="/List">
-                Search Country
-              </Link>{" "}
-              {"  |  "}
-              <Link  to="/Fav">
-                Saved Country
-              </Link>{" "}
-              {"   "}
+          <div className="big">
+            <div>
+              <div className="link">
+                <Link to="/List">Search Country</Link> {"  |  "}
+                <Link to="/Fav">Saved Country</Link> {"   "}
+              </div>
+              <br />
+              <br />
+              <Route
+                path="/List"
+                render={() => (
+                  <Listcountry
+                    country={this.state.Countries}
+                    add={this.add}
+                    SearchCountry={this.SearchCountry}
+                    handleChange={this.handleChange}
+                    cName={this.state.cName}
+                  />
+                )}
+              />
+              <Route
+                path="/Fav"
+                render={() => (
+                  <Fav
+                    SavedCountry={this.state.MyList}
+                    delete={this.delete}
+                    deleteAll={this.deleteAll}
+                    modifyItemName={this.modifyItemName}
+                    handleDeletedChange={this.handleDeletedChange}
+                    deletedSelectedItem={this.deletedSelectedItem}
+                  />
+                )}
+              />
             </div>
-            <br />
-            <br />
-            <Route
-              path="/List"
-              render={() => (
-                <Listcountry
-                  country={this.state.Countries}
-                  add={this.add}
-                  SearchCountry={this.SearchCountry}
-                  handleChange={this.handleChange}
-                  cName={this.state.cName}
-                />
-              )}
-            />
-            <Route
-              path="/Fav"
-              render={() => (
-                <Fav
-                  SavedCountry={this.state.MyList}
-                  delete={this.delete}
-                  deleteAll={this.deleteAll}
-                  modifyItemName={this.modifyItemName}
-                  handleDeletedChange={this.handleDeletedChange}
-                  deletedSelectedItem={this.deletedSelectedItem}
-                />
-              )}
-            />
           </div>
         </Router>
       </div>
