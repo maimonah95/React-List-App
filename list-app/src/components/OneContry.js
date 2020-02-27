@@ -2,15 +2,9 @@ import React, { Component } from "react";
 import "./../App.css";
 import { IoMdAdd } from "react-icons/io";
 export default class OneContry extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-
-  //   };
-  // }
   render() {
     return (
-      <table className="table table-hover">
+      <table className="table table-hover tab">
         <thead>
           <tr>
             <th scope="col">{this.props.country.name}</th>

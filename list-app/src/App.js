@@ -8,55 +8,34 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      //Handle Input
       cName: "",
+      //One country that user search about it
       Countries: [],
+      //list user country Added
       MyList: []
     };
   }
+  //Deleted Item from MyList
   deletedSelectedItem = () => {
-const leftCountry=this.state.MyList.filter((item)=>{
-return item.delete!==true
-})
-this.setState({ MyList: leftCountry });
-  }
-
+    const leftCountry = this.state.MyList.filter(item => {
+      return item.delete !== true;
+    });
+    this.setState({ MyList: leftCountry });
+  };
+  //Select Item from Mylist and check if ckecked or not
   handleDeletedChange = (country, e) => {
-          console.log(country);
+    console.log(country);
     const deleted = [...this.state.MyList];
     let index = deleted.indexOf(country);
     if (e) {
-   deleted[index].delete = false;
+      deleted[index].delete = false;
     } else {
-deleted[index].delete = true;
+      deleted[index].delete = true;
     }
     this.setState({ MyList: deleted });
   };
-  //Edit an item from a list 1
-  //Modify object variable
-  modify = country => {
-    if (country.love === "Heart") {
-      const myList = this.state.MyList;
-      myList.map(item => {
-        if (item.name === country.name) {
-          item.love = "NotHeart";
-        }
-      });
-      this.setState({
-        MyList: myList
-      });
-    } else {
-      const myList = this.state.MyList;
-      myList.map(item => {
-        if (item.name === country.name) {
-          item.love = "Heart";
-        }
-      });
-      this.setState({
-        MyList: myList
-      });
-    }
-  };
-  //Edit an item from a list 2
+  //Edit an item from a list
   //modify the Item Name (name that is display to the user)
   modifyItemName = (country, e) => {
     const myList = this.state.MyList;
@@ -67,14 +46,6 @@ deleted[index].delete = true;
     });
     this.setState({
       MyList: myList
-    });
-  };
-  //Remove an item from a list
-  delete = country => {
-    console.log("finally");
-    const filtredList = this.state.MyList.filter(item => item !== country);
-    this.setState({
-      MyList: filtredList
     });
   };
   //Clear/delete all items
@@ -128,7 +99,6 @@ deleted[index].delete = true;
           currencies: res.data[0].currencies[0].code,
           timezones: res.data[0].timezones[0],
           flag: res.data[0].flag,
-          love: "Heart" //IoMdHeart // IoMdHeartHalf
         };
         this.setState({
           Countries: [CurrentCountry],
@@ -141,15 +111,15 @@ deleted[index].delete = true;
   };
   render() {
     return (
-      <div className="style">
+      <div >
         <Router>
           <div>
             <div className="link">
-              <Link className="links" to="/List">
-                Country
+              <Link  to="/List">
+                Search Country
               </Link>{" "}
               {"  |  "}
-              <Link className="links" to="/Fav">
+              <Link  to="/Fav">
                 Saved Country
               </Link>{" "}
               {"   "}
@@ -175,7 +145,6 @@ deleted[index].delete = true;
                   SavedCountry={this.state.MyList}
                   delete={this.delete}
                   deleteAll={this.deleteAll}
-                  modify={this.modify}
                   modifyItemName={this.modifyItemName}
                   handleDeletedChange={this.handleDeletedChange}
                   deletedSelectedItem={this.deletedSelectedItem}

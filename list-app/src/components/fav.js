@@ -16,7 +16,6 @@ export default class Fav extends Component {
             key={index}
             add={this.props.add}
             delete={this.props.delete}
-            modify={this.props.modify}
             modifyItemName={this.props.modifyItemName}
             handleDeletedChange={this.props.handleDeletedChange}
           />
@@ -30,7 +29,7 @@ export default class Fav extends Component {
           <button className="delAll" onClick={() => this.props.deleteAll()}>
             <IoIosTrash />
             <br />
-            delete all
+             {" "}delete all
           </button>
           <br/>
           <button
@@ -39,13 +38,14 @@ export default class Fav extends Component {
           >
             <IoIosTrash />
             <br />
-            delete Selected Item
+            delete 
           </button>
           {FavCou}
         </div>
       );
     } else {
-      return <div> {FavCou}</div>;
+      return <div> 
+        {FavCou}</div>;
     }
   }
 }

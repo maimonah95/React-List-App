@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# Project #2: Simple React App
 
-### `npm start`
+## Overview:
+Country Informations React App.
+The User Can Serach about Countries By Writing Country name.
+## technologies used
+ * React :
+  A JavaScript library for building user interfaces.
+ * CLI
+ * postman
+ * CSS library (IoIconPack)
+ * API (https://restcountries.eu/#api-endpoints-response-example) 
+ * 3rd party libraries (IoIconPack).
+ * React component library(BrowserRouter).
+## wireframes :
+This is sample representation of the structure and functionality of the web page
+![Getting Started](wireFrames.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Use Story:
+* As a user, I should be able to Search about countries by name of the country
+*  As a user, I should be able to Save 
+ Country and ad it to List.
+ * As a user, I should be able to Delete List of Countries from my list.
+ * As a user, I should be able to Delete /Clear all Countries from my list.
+ * As a user, I should be able to modify item name in the list.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+ ##  Development process:
 
-### `npm test`
+**Planning:** Create User story .
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Analysis and design :**
 
-### `npm run build`
+Design wireframes.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Implement:** 
+- Download the Requirements.
+  * To create react app we need to Download packages and Tools using npm
+    or Run packages without downloading using npx. 
+     * (npx create-react-app  (app name)).
+  * BrowserRouter is the router implementation for HTML5 browsers (vs Native). // Link is your replacement for anchor tags.
+     * npm install react-router-dom
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+  *   axios is promise-based HTTP client that sports an easy-to-use API and can be used in both the browser and Node. js
+      * npm install axios --save 
+  * IoIconPack is utilizes ES6 imports that allows us to include icons
+      * import IoIconPack from 'react-icons/lib/io'
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+**Testing:** 
+Test Each function .
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+**Maintenance :**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+...
+## unsolved problems:
+Save the data to localStorage or an API.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Useful Resources
+- **[React.js](https://reactjs.org/)**
+- **[React Deployment Guide](https://github.com/gitname/react-gh-pages)**
+- **[GA Repo](https://github.com/sei-entropy/project-2-prompt)** 
+ 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

@@ -20,8 +20,10 @@ html{
   transform: translate(-50%, -50%); 
   border-radius: 10px;
 }
-
-
+.tab{
+  text-align: center;
+  background-color: #cf9e6577;
+}
 .delAll{
   border-radius: 10px;
     text-align: center;
@@ -36,24 +38,20 @@ html{
   top: 0px;
   left: 95%;   
 }
-.Links{
-  text-align: center;
-}
-a.Links {
-  color: #fff;
-  text-align: center;
-  background-color:#fff;
+.link a {
+    color: #fff;
+    /* border: 16px groove transparent; */
+    text-decoration: none;
+    /* background-color: #815829c2; */
+    background-color: transparent;
 }
 .link{
     text-align: center;
-    background-color: #cf9e6577 ;
+    background-color: #cf9e6577;
     color: #fff;
     border-radius: 10px;
     padding: 10px;
     top: 50px;
-}
-.Links :hover{
-  background-color: rgba(138, 141, 180, 0.473);
 }
 
 .favItem{
@@ -65,9 +63,7 @@ a.Links {
   color: #cf9e65;
       margin: 15px;
   text-justify: auto;
-
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -81,9 +77,6 @@ padding: 0 20px;
 margin: 20px;
 border-radius: 10px;
 box-shadow: rgba(123, 158, 33, 0.692);
-
-/* color:;
-background-color: ; */
    }
 .ButtonCountry{
 width: 100px;
@@ -101,21 +94,16 @@ transform: rotate(-2deg);
    }
 .listCountry{
     text-align: center;
-}
-   
+}  
 .delet{
     text-align: center;
      margin-right: 20px;
-}
-   
+}  
 img {
     border: 2px solid rgb(138, 28, 28);
     width: 214px;
-    height: 150px;
-    
+    height: 150px;  
 }
-
-
 .Add-to-list{
    border-radius: 10px;
     text-align: center;
@@ -123,7 +111,7 @@ img {
     top: 0px;
     left: 40%;
 }
-/* .DeletNum{
+.DeletNum{
     border-radius: 10px;
     text-align: center;
     position: relative;
@@ -134,145 +122,51 @@ img {
     border-radius: 10px;
     text-align: center;
     position: relative;
-    top: -34px;
-  left: 41%;
+    top: -20px;
+  left: 44%;
 }
-.modify{
+/* .modify{
        border-radius: 10px;
     text-align: center;
     position: relative;
-    top: -40px;
-    left: 42%;
-}*/
-/* .selectedItem{
+    top: -21px;
+    left: 91%
+} */
+ .selectedItem{
            border-radius: 10px;
     text-align: center;
     position: relative;
-    top: -40px;
-    left: 43%; 
-} */
+    top: -22px;
+    left: 45% 
+}
 .Toggle-filter-none{
   display: none;
-    display: none;
-    text-align: center;
-  color: #cf9e65;
-  text-justify: auto;
 }
 .Toggle-filter-display{
   display: inline-block;
     text-align: center;
   color: black;
-  background-color: #7c65cf;
+  background-color: #b59c7feb;
       height: 400px;
     width: 1050px;
+        margin-top: inherit;
 }
-.Toggle2-filter-none{
-  display: none;
-    display: none;
-    text-align: center;
-  color: #cf9e65;
-  text-justify: auto;
-}
-.Toggle2-filter-display{
-  display: inline-block;
-    text-align: center;
-  color: black;
-  background-color: #cf9e6554;
-      height: 400px;
-    width: 1050px;
-}
-.favItemRed{
-  /*  */
-            height: 100px;
+.favItem{
+    height: 100px;
     padding: 15px;
-    background-color: #7c65cf;
+    background-color: #b59c7feb;
     border-radius: 10px;
+    color: black;
+    margin: 10px;
+    margin-right: 10px;
     text-align: center;
-  color: black;
-      margin: 15px;
-  text-justify: auto;
 }
-.favItemRed input{
+.favItem input{
     background-color: transparent;
     border: 0;
-    color: #fff;
+    color: black;
     font-size: 18px;
 }
-.favItemRed input :focus{
+.favItem input :focus{
 outline: none;
 } 
-.favItemRed .DeletNum{
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-  top: 20px;
-  left: 35%;
-}
-.favItemRed .Watch{
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-    top: -34px;
-  left: 41%;
-}
-.favItemRed .modify{
-       border-radius: 10px;
-    text-align: center;
-    position: relative;
-    top: -40px;
-    left: 42%;
-}
-.favItemRed .selectedItem{
-           border-radius: 10px;
-    text-align: center;
-    position: relative;
-    top: -40px;
-    left: 43%;
-}
-.favItemBlue{
-          height: 100px;
-    padding: 15px;
-    background-color: #cf9e6554;
-    border-radius: 10px;
-    text-align: center;
-  color: black;
-      margin: 15px;
-  text-justify: auto;
-}
-.favItemBlue input{
-    background-color: transparent;
-    border: 0;
-    color: #fff;
-    font-size: 18px;
-}
-.favItemBlue input :focus{
-outline: none;
-} 
-.favItemBlue .DeletNum{
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-  top: 20px;
-  left: 35%;
-}
-.favItemBlue .Watch{
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-    top: -34px;
-  left: 41%;
-}
-.favItemBlue .modify{
-       border-radius: 10px;
-    text-align: center;
-    position: relative;
-    top: -40px;
-    left: 42%;
-}
-.favItemBlue .selectedItem{
-           border-radius: 10px;
-    text-align: center;
-    position: relative;
-    top: -40px;
-    left: 43%;
-}
