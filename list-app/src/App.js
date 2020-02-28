@@ -8,8 +8,10 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      //Handle Input
+      //Handle Country Input
       cName: "",
+      //Handle Region Input
+      rName: "",
       //One country that user search about it
       Countries: [],
       //list user country Added
@@ -72,15 +74,16 @@ export default class App extends Component {
     }
     console.log(country.name);
   };
-  // handle input text
+  // handle input text country
   handleChange = e => {
     //e.preventDefault();
     this.setState({
+      Countries: [],
       cName: e.target.value
     });
     e.target.focus();
   };
-  //Fetch data from 3rd party(using axios)
+  //Fetch data from 3rd party(using axios)1st ENDpoint
   SearchCountry = () => {
     console.log("Searching ....");
     axios({
@@ -89,22 +92,67 @@ export default class App extends Component {
       url: `https://restcountries.eu/rest/v2/name/${this.state.cName}`
     })
       .then(res => {
-        console.log("name" + res.data[0].name);
-        const CurrentCountry = {
-          ItemName: res.data[0].name,
-          name: res.data[0].name,
-          region: res.data[0].region,
-          languages: res.data[0].languages[0].name,
-          capital: res.data[0].capital,
-          currencies: res.data[0].currencies[0].code,
-          timezones: res.data[0].timezones[0],
-          flag: res.data[0].flag,
-        };
-        this.setState({
-          Countries: [CurrentCountry],
-          cName: " "
+        let contr = res.data.map((data, index) => {
+          let CurrentCountry = {};
+          return (
+            console.log("name" + data.name),
+            (CurrentCountry.ItemName = data.name),
+            (CurrentCountry.name = data.name),
+            (CurrentCountry.region = data.region),
+            (CurrentCountry.languages = data.languages[0].name),
+            (CurrentCountry.capital = data.capital),
+            (CurrentCountry.currencies = data.currencies[0].code),
+            (CurrentCountry.flag = data.flag),
+            this.setState({
+              Countries: [...this.state.Countries, CurrentCountry],
+              cName: " "
+            })
+          );
         });
       })
+
+      .catch(err => {
+        console.log("ERROR: ", err);
+      });
+  };
+  //handle input text Rigion
+  handleRChange = e => {
+    //e.preventDefault();
+    this.setState({
+      Countries: [],
+      rName: e.target.value
+    });
+    e.target.focus();
+  };
+  //Fetch data from 3rd party(using axios) API 2nd ENDPoint 
+  SearchCountryByRegion = () => {
+    console.log("Searching ....");
+    axios({
+      method: "Get",
+      // url: `https://restcountries.eu/rest/v2/name/asia`
+      url: `https://restcountries.eu/rest/v2/region/${this.state.rName}`
+    })
+      .then(res => {
+        let contr = res.data.map((data, index) => {
+          let CurrentCountry = {};
+          return (
+            console.log("name" + data.name),
+            (CurrentCountry.ItemName = data.name),
+            (CurrentCountry.name = data.name),
+            (CurrentCountry.region = data.region),
+            (CurrentCountry.languages = data.languages[0].name),
+            (CurrentCountry.capital = data.capital),
+            (CurrentCountry.currencies = data.currencies[0].code),
+            (CurrentCountry.flag = data.flag),
+            this.setState({
+              Countries: [...this.state.Countries, CurrentCountry],
+              cName: " "
+            })
+          );
+        });
+        console.log(this.state.Countries.length)
+      })
+
       .catch(err => {
         console.log("ERROR: ", err);
       });
@@ -130,6 +178,9 @@ export default class App extends Component {
                     SearchCountry={this.SearchCountry}
                     handleChange={this.handleChange}
                     cName={this.state.cName}
+                    handleRChange={this.handleRChange}
+                    rName={this.state.rName}
+                    SearchCountryByRegion={this.SearchCountryByRegion}
                   />
                 )}
               />

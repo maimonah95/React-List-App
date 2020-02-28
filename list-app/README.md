@@ -1,7 +1,9 @@
 
 
 # Project #2: Simple React App
-<img src="https://image.flaticon.com/icons/svg/744/744502.svg" width="100" height="100">
+
+=======
+<img src="https://image.flaticon.com/icons/svg/744/744502.svg" width="450" height="350">
 ## Overview:
 Country Informations React App.
 The User Can Serach about Countries By Writing Country name.

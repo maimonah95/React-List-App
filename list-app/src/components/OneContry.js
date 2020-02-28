@@ -38,10 +38,6 @@ export default class OneContry extends Component {
             <td> {this.props.country.currencies}</td>
           </tr>
           <tr>
-            <th scope="row">Time</th>
-            <td> {this.props.country.timezones}</td>
-          </tr>
-          <tr>
             <th scope="row">Flag</th>
             <td>
               <img src={`${this.props.country.flag}`} />

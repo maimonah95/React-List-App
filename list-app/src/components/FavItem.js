@@ -66,8 +66,6 @@ export default class FavItem extends Component {
               <br />
               <strong>currencies :</strong>{this.props.country.currencies}
               <br />
-              <strong>Time: </strong>{this.props.country.timezones}
-              <br />
               <img src={`${this.props.country.flag}`} />
             </div>
           </div>
