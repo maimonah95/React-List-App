@@ -93,20 +93,29 @@ export default class App extends Component {
     })
       .then(res => {
         let contr = res.data.map((data, index) => {
-          let CurrentCountry = {};
-          return (
-            console.log("name" + data.name),
-            (CurrentCountry.ItemName = data.name),
-            (CurrentCountry.name = data.name),
-            (CurrentCountry.region = data.region),
-            (CurrentCountry.languages = data.languages[0].name),
-            (CurrentCountry.capital = data.capital),
-            (CurrentCountry.currencies = data.currencies[0].code),
-            (CurrentCountry.flag = data.flag),
+          let CurrentCountry ={};
+            CurrentCountry.ItemName = data.name;
+            CurrentCountry.name = data.name;
+            CurrentCountry.region = data.region;
+            CurrentCountry.languages = data.languages[0].name;
+            CurrentCountry.capital = data.capital;
+            CurrentCountry.currencies = data.currencies[0].code;
+            CurrentCountry.flag = data.flag
+          // return (
+            // console.log("name" + data.name),
+            // (CurrentCountry.ItemName = data.name),
+            // (CurrentCountry.name = data.name),
+            // (CurrentCountry.region = data.region),
+            // (CurrentCountry.languages = data.languages[0].name),
+            // (CurrentCountry.capital = data.capital),
+            // (CurrentCountry.currencies = data.currencies[0].code),
+            // (CurrentCountry.flag = data.flag),
+            
             this.setState({
               Countries: [...this.state.Countries, CurrentCountry],
               cName: " "
-            })
+            }
+            // )
           );
         });
       })
